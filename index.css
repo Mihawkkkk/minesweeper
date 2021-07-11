@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.grid {
+  transition: all 0.3s;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: grey;
+  margin: auto;
+  margin-top: 5px;
+}
+.grid div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.grid div i {
+  transition: all 0.5s;
+  color: rgb(158, 19, 19);
+  font-size: 120%;
+}
+.grid div i.fa-times {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  color: red;
+  font-size: 40px;
+}
+.grid div i.fa-bomb {
+  color: black;
+}
+.bomb {
+}
+
+.cheked {
+  background-color: white;
+}
+button {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+  position: relative;
+}
+button i {
+  font-size: 50px;
+  color: yellow;
+}
+button::before {
+  position: absolute;
+  width: 300px;
+  content: attr(data-text);
+  font-size: 24px;
+  font-weight: bold;
+  top: 20px;
+  left: 0;
+}
+.easy,
+.hard {
+  color: white;
+  width: 150px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.easy {
+  background-color: green;
+}
+.hard {
+  background-color: red;
+}
+.mode {
+  display: flex;
+  width: 300px;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  .grid div {
+    font-size: 15px;
+  }
+
+  .grid div i.fa-times {
+    font-size: 18px;
+  }
+  button::before {
+    width: 130px;
+    font-size: 15px;
+    left: 50px;
+  }
+  .mode {
+    width: 200px;
+  }
+  .easy,
+  .hard {
+    width: 100px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 831px) {
+  .grid div i {
+    font-size: 16px;
+  }
+}
